@@ -60,7 +60,7 @@ public class KirimEmail : MonoBehaviour {
 		MailMessage mail = new MailMessage ();
 		//yantypurnama7795@gmail.com
 		mail.From = new MailAddress (YourEmail.text);
-		mail.To.Add ("efath.hidayat@gmail.com");
+		mail.To.Add ("yantypurnama7795@gmail.com");
 		mail.Subject = Subject.text + "Mail From: " + YourEmail.text ;
 
 			mail.Body = "Mail From: " + YourEmail.text + "\n Berikut adalah jawaban \n" + "\n \n " + Message.text + "\n \n "

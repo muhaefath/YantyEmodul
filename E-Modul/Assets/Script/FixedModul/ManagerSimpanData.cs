@@ -7,8 +7,12 @@ public class ManagerSimpanData : MonoBehaviour {
 	public string[] NamaData;
 	// Use this for initialization
 	void Start () {
+		
+	
 		for (int i = 0; i < NamaData.Length; i++) {
 			NamaData [i] = "jawab " + i;
+			//PlayerPrefs.SetString (NamaData[i],"Tidak Ada Jawaban");
+			//Debug.Log (PlayerPrefs.GetString (NamaData[i]));
 		}
 		for (int i = 0; i < Jawab.Length; i++) {
 			if (PlayerPrefs.GetString (NamaData [i]) == "") {
