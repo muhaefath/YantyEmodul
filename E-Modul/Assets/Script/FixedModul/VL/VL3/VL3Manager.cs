@@ -7,7 +7,7 @@ public class VL3Manager : MonoBehaviour {
 	public List<GameObject> KumpulanAction;
 	public List<GameObject> SatuanBahan;
 	public List<GameObject> SatuanBahanParent;
-	public List<DragVL3> SatuanBahanScript;
+	public List<Button> SatuanBahanScript;
 
 	public GameObject BackBawah;
 
@@ -39,7 +39,12 @@ public class VL3Manager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Vector2.Distance(SatuanBahan[0].transform.position,this.transform.position) < 300)
+		
+	}
+
+	public void VL4Atur(int index)
+	{
+		if(index ==0)
 		{
 			SatuanBahan [0].transform.position = SatuanBahanParent [0].transform.position;
 
@@ -54,7 +59,7 @@ public class VL3Manager : MonoBehaviour {
 
 		}
 
-		else if(Vector2.Distance(SatuanBahan[1].transform.position,BackBawah.transform.position) < 300)
+		else if(index ==1)
 		{
 			SatuanBahan [1].transform.position = SatuanBahanParent [1].transform.position;
 
@@ -69,7 +74,7 @@ public class VL3Manager : MonoBehaviour {
 			SatuanBahanScript [1].enabled = false;
 			SatuanBahanScript [2].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[2].transform.position,BackBawah.transform.position) < 300)
+		else if(index ==2)
 		{
 			SatuanBahan [2].transform.position = SatuanBahanParent [2].transform.position;
 
@@ -84,7 +89,7 @@ public class VL3Manager : MonoBehaviour {
 			SatuanBahanScript [2].enabled = false;
 			SatuanBahanScript [3].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[3].transform.position,BackBawah.transform.position) < 300)
+		else if(index ==3)
 		{
 			SatuanBahan [3].transform.position = SatuanBahanParent [3].transform.position;
 
@@ -99,7 +104,7 @@ public class VL3Manager : MonoBehaviour {
 			SatuanBahanScript [3].enabled = false;
 			SatuanBahanScript [4].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[4].transform.position,BackBawah.transform.position) < 300)
+		else if(index ==4)
 		{
 			SatuanBahan [4].transform.position = SatuanBahanParent [4].transform.position;
 
@@ -114,6 +119,7 @@ public class VL3Manager : MonoBehaviour {
 
 		}
 	}
+
 	public void RestrartVL3()
 	{
 		for (int i = 0; i < KumpulanAction.Count; i++) {

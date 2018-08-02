@@ -11,7 +11,7 @@ public class VL7Manager : MonoBehaviour {
 	public List<GameObject> KumpulanAction;
 	public List<GameObject> SatuanBahan;
 	public List<GameObject> SatuanBahanParent;
-	public List<DragVL7> SatuanBahanScript;
+	public List<Button> SatuanBahanScript;
 
 	public GameObject BackBawah;
 	public Animator Anim;
@@ -36,8 +36,14 @@ public class VL7Manager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
 
-		if(Vector2.Distance(SatuanBahan[0].transform.position,this.transform.position) < 300)
+	}
+
+	public void VL7Atur(int index)
+	{
+
+		if(index==0)
 		{
 			SatuanBahan [0].transform.position = SatuanBahanParent [0].transform.position;
 
@@ -53,7 +59,7 @@ public class VL7Manager : MonoBehaviour {
 
 		}
 
-		else if(Vector2.Distance(SatuanBahan[1].transform.position,BackBawah.transform.position) < 300)
+		else if(index==1)
 		{
 			SatuanBahan [1].transform.position = SatuanBahanParent [1].transform.position;
 
@@ -68,7 +74,7 @@ public class VL7Manager : MonoBehaviour {
 			SatuanBahanScript [1].enabled = false;
 			SatuanBahanScript [2].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[2].transform.position,BackBawah.transform.position) < 300)
+		else if(index==2)
 		{
 			SatuanBahan [2].transform.position = SatuanBahanParent [2].transform.position;
 
@@ -83,7 +89,7 @@ public class VL7Manager : MonoBehaviour {
 			SatuanBahanScript [2].enabled = false;
 			SatuanBahanScript [3].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[3].transform.position,BackBawah.transform.position) < 300)
+		else if(index==3)
 		{
 			SatuanBahan [3].transform.position = SatuanBahanParent [3].transform.position;
 
@@ -95,8 +101,8 @@ public class VL7Manager : MonoBehaviour {
 			SatuanBahanScript [3].enabled = false;
 			Anim.SetBool ("Jalan",true);
 		}
-
 	}
+
 	public void RestrartVL4()
 	{
 		for (int i = 0; i < KumpulanAction.Count; i++) {

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class VL9Manager : MonoBehaviour {
 
 	public List<GameObject> KumpulanAction;
 	public List<GameObject> SatuanBahan;
 	public List<GameObject> SatuanBahanParent;
-	public List<DragVL9> SatuanBahanScript;
+	public List<Button> SatuanBahanScript;
 
 	public GameObject BackBawah;
 	public Animator Anim;
@@ -26,8 +26,14 @@ public class VL9Manager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
 
-		if(Vector2.Distance(SatuanBahan[0].transform.position,this.transform.position) < 200)
+	}
+
+	public void VL9Atur(int index)
+	{
+
+		if(index==0)
 		{
 			SatuanBahan [0].transform.position = SatuanBahanParent [0].transform.position;
 
@@ -38,7 +44,7 @@ public class VL9Manager : MonoBehaviour {
 
 		}
 
-		else if(Vector2.Distance(SatuanBahan[1].transform.position,BackBawah.transform.position) < 200)
+		else if(index==1)
 		{
 			SatuanBahan [1].transform.position = SatuanBahanParent [1].transform.position;
 
@@ -47,7 +53,7 @@ public class VL9Manager : MonoBehaviour {
 			SatuanBahanScript [1].enabled = false;
 			SatuanBahanScript [2].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[2].transform.position,BackBawah.transform.position) < 200)
+		else if(index==2)
 		{
 			SatuanBahan [2].transform.position = SatuanBahanParent [2].transform.position;
 
@@ -56,7 +62,7 @@ public class VL9Manager : MonoBehaviour {
 			SatuanBahanScript [2].enabled = false;
 			SatuanBahanScript [3].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[3].transform.position,BackBawah.transform.position) < 200)
+		else if(index==3)
 		{
 			SatuanBahan [3].transform.position = SatuanBahanParent [3].transform.position;
 
@@ -65,8 +71,8 @@ public class VL9Manager : MonoBehaviour {
 			SatuanBahanScript [3].enabled = false;
 
 		}
-
 	}
+
 	public void RestrartVL4()
 	{
 		for (int i = 0; i < KumpulanAction.Count; i++) {

@@ -7,7 +7,9 @@ public class VL1Manager : MonoBehaviour {
 	public List<GameObject> DaftarVL1; 
 	public List<GameObject> SatuanBahan;
 	public List<GameObject> SatuanBahanParent;
-	public List<DragVL1> ScriptBahan;
+	public List<Button> ScriptBahan;
+	public DragPaku ScriptBahanper;
+
 	public List<GameObject> KumpulanPaku;
 
 	public int CabutPaku;
@@ -32,19 +34,23 @@ public class VL1Manager : MonoBehaviour {
 			ScriptBahan [i].enabled = false;
 		}
 		ScriptBahan [0].enabled = true;
-
+		ScriptBahanper.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		Vl1Step ();
+		//Vl1Step ();
+		 if(CabutPaku == 3)
+		{
 
+			Anim.SetBool ("Jalan",true);
+		}
 	}
 
-	void Vl1Step()
+	public void Vl1Step(int index)
 	{
-		if(Vector2.Distance(SatuanBahan[0].transform.position,BackBawah.transform.position) < 300)
+		if(index == 0)
 		{
 			SatuanBahan [0].transform.position = SatuanBahanParent [0].transform.position;
 
@@ -59,7 +65,7 @@ public class VL1Manager : MonoBehaviour {
 			ScriptBahan [1].enabled = true;
 
 		}
-		else if(Vector2.Distance(SatuanBahan[1].transform.position,BackBawah.transform.position) < 300)
+		else if(index == 1)
 		{
 			SatuanBahan [1].transform.position = SatuanBahanParent [1].transform.position;
 
@@ -74,7 +80,7 @@ public class VL1Manager : MonoBehaviour {
 			ScriptBahan [1].enabled = false;
 			ScriptBahan [2].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[2].transform.position,BackBawah.transform.position) < 300)
+		else if(index == 2)
 		{
 			SatuanBahan [2].transform.position = SatuanBahanParent [2].transform.position;
 
@@ -89,7 +95,7 @@ public class VL1Manager : MonoBehaviour {
 			ScriptBahan [2].enabled = false;
 			ScriptBahan [3].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[3].transform.position,BackBawah.transform.position) < 300)
+		else if(index == 3)
 		{
 			SatuanBahan [3].transform.position = SatuanBahanParent [3].transform.position;
 
@@ -101,16 +107,14 @@ public class VL1Manager : MonoBehaviour {
 			DaftarVL1 [2].SetActive (false);
 			DaftarVL1 [3].SetActive (true);
 			ScriptBahan [3].enabled = false;
-			ScriptBahan [4].enabled = true;
+			ScriptBahanper.enabled = true;
 
 		}
-		else if(CabutPaku == 3)
-		{
-			
-			Anim.SetBool ("Jalan",true);
-		}
+
 
 	}
+
+
 
 	public void RestrartVL1()
 	{

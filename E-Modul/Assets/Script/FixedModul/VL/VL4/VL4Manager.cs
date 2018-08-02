@@ -8,7 +8,8 @@ public class VL4Manager : MonoBehaviour {
 	public List<GameObject> KumpulanAction;
 	public List<GameObject> SatuanBahan;
 	public List<GameObject> SatuanBahanParent;
-	public List<DragVL4> SatuanBahanScript;
+	public List<Button> SatuanBahanScript;
+	public DragVL4 SatuanBahanScriptPer;
 
 	public GameObject BackBawah;
 	public GameObject Gelas5;
@@ -25,6 +26,7 @@ public class VL4Manager : MonoBehaviour {
 			SatuanBahanScript [i].enabled = false;
 		}
 		SatuanBahanScript [0].enabled = true;
+		SatuanBahanScriptPer.enabled = false;
 
 		for (int i = 0; i < SatuanBahanParent.Count; i++) {
 			SatuanBahanParent [i].GetComponent<Image> ().color = new Color32 (255,255,255,60);
@@ -36,8 +38,30 @@ public class VL4Manager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		 if(Vector2.Distance(SatuanBahan[5].transform.position,Gelas5.transform.position) < 120)
+		{
+			SatuanBahan [5].transform.position = SatuanBahanParent [5].transform.position;
 
-		if(Vector2.Distance(SatuanBahan[0].transform.position,BackBawah.transform.position) < 300)
+
+
+			SatuanBahanParent [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
+			SatuanBahan [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
+
+			KumpulanAction [4].SetActive (false);
+			KumpulanAction [1].SetActive (false);
+			KumpulanAction [5].SetActive (true);
+			SatuanBahanScriptPer.enabled = false;
+
+			//SatuanBahanScript [5].enabled = true;
+			anim2.SetBool("Jalan",true);
+			//Debug.Log ("2");
+		}
+	}
+
+	public void VL4Atur(int index)
+	{
+
+		if(index == 0)
 		{
 			SatuanBahan [0].transform.position = SatuanBahanParent [0].transform.position;
 
@@ -53,7 +77,7 @@ public class VL4Manager : MonoBehaviour {
 
 		}
 
-		else if(Vector2.Distance(SatuanBahan[1].transform.position,BackBawah.transform.position) < 300)
+		else if(index == 1)
 		{
 			SatuanBahan [1].transform.position = SatuanBahanParent [1].transform.position;
 
@@ -69,7 +93,7 @@ public class VL4Manager : MonoBehaviour {
 			SatuanBahanScript [2].enabled = true;
 			anim1.SetBool ("Jalan",true);
 		}
-		else if(Vector2.Distance(SatuanBahan[2].transform.position,BackBawah.transform.position) < 300)
+		else if(index == 2)
 		{
 			SatuanBahan [2].transform.position = SatuanBahanParent [2].transform.position;
 
@@ -79,12 +103,12 @@ public class VL4Manager : MonoBehaviour {
 			SatuanBahanParent [2].GetComponent<Image> ().color = new Color32 (255,255,255,60);
 			SatuanBahan [2].GetComponent<Image> ().color = new Color32 (255,255,255,60);
 
-			//KumpulanAction [1].SetActive (false);
+			KumpulanAction [1].SetActive (false);
 			KumpulanAction [2].SetActive (true);
 			SatuanBahanScript [2].enabled = false;
 			SatuanBahanScript [3].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[3].transform.position,BackBawah.transform.position) < 300)
+		else if(index == 3)
 		{
 			SatuanBahan [3].transform.position = SatuanBahanParent [3].transform.position;
 
@@ -100,7 +124,7 @@ public class VL4Manager : MonoBehaviour {
 			SatuanBahanScript [4].enabled = true;
 
 		}
-		else if(Vector2.Distance(SatuanBahan[4].transform.position,BackBawah.transform.position) < 120)
+		else if(index == 4)
 		{
 			SatuanBahan [4].transform.position = SatuanBahanParent [4].transform.position;
 
@@ -113,27 +137,12 @@ public class VL4Manager : MonoBehaviour {
 			KumpulanAction [3].SetActive (false);
 			KumpulanAction [4].SetActive (true);
 			SatuanBahanScript [4].enabled = false;
-			SatuanBahanScript [5].enabled = true;
+			SatuanBahanScriptPer.enabled = true;
 			//Debug.Log ("2");
 		}
-		else if(Vector2.Distance(SatuanBahan[5].transform.position,Gelas5.transform.position) < 120)
-		{
-			SatuanBahan [5].transform.position = SatuanBahanParent [5].transform.position;
 
-
-
-			SatuanBahanParent [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
-			SatuanBahan [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
-
-			KumpulanAction [4].SetActive (false);
-			KumpulanAction [1].SetActive (false);
-			KumpulanAction [5].SetActive (true);
-			SatuanBahanScript [5].enabled = false;
-			//SatuanBahanScript [5].enabled = true;
-			anim2.SetBool("Jalan",true);
-			//Debug.Log ("2");
-		}
 	}
+
 	public void RestrartVL4()
 	{
 		for (int i = 0; i < KumpulanAction.Count; i++) {

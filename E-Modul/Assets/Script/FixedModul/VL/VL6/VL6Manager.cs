@@ -9,7 +9,7 @@ public class VL6Manager : MonoBehaviour {
 	public List<GameObject> KumpulanAction;
 	public List<GameObject> SatuanBahan;
 	public List<GameObject> SatuanBahanParent;
-	public List<DragVL6> SatuanBahanScript;
+	public List<Button> SatuanBahanScript;
 
 	public GameObject BackBawah;
 	public Animator anim1;
@@ -37,7 +37,13 @@ public class VL6Manager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Vector2.Distance(SatuanBahan[0].transform.position,this.transform.position) < 300)
+
+	}
+
+	public void VL6Atur(int index)
+	{
+
+		if(index == 0)
 		{
 			SatuanBahan [0].transform.position = SatuanBahanParent [0].transform.position;
 
@@ -53,7 +59,7 @@ public class VL6Manager : MonoBehaviour {
 
 		}
 
-		else if(Vector2.Distance(SatuanBahan[1].transform.position,BackBawah.transform.position) < 300)
+		else if(index == 1)
 		{
 			SatuanBahan [1].transform.position = SatuanBahanParent [1].transform.position;
 
@@ -69,7 +75,7 @@ public class VL6Manager : MonoBehaviour {
 			SatuanBahanScript [2].enabled = true;
 			anim1.SetBool ("Jalan",true);
 		}
-		else if(Vector2.Distance(SatuanBahan[2].transform.position,BackBawah.transform.position) < 300)
+		else if(index == 2)
 		{
 			SatuanBahan [2].transform.position = SatuanBahanParent [2].transform.position;
 
@@ -83,8 +89,8 @@ public class VL6Manager : MonoBehaviour {
 			anim2.SetBool ("Jalan",true);
 		}
 
-
 	}
+
 	public void RestrartVL4()
 	{
 		for (int i = 0; i < KumpulanAction.Count; i++) {

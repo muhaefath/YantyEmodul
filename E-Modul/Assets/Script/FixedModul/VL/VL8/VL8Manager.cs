@@ -9,7 +9,8 @@ public class VL8Manager : MonoBehaviour {
 	public List<GameObject> KumpulanAction;
 	public List<GameObject> SatuanBahan;
 	public List<GameObject> SatuanBahanParent;
-	public List<DragVL8> SatuanBahanScript;
+	public List<Button> SatuanBahanScript;
+	public DragPaku2 SatuanBahanScriptPer;
 
 	public GameObject BackBawah;
 	public Animator Anim;
@@ -27,6 +28,7 @@ public class VL8Manager : MonoBehaviour {
 			SatuanBahanScript [i].enabled = false;
 		}
 		SatuanBahanScript [0].enabled = true;
+		SatuanBahanScriptPer.enabled = false;
 
 		for (int i = 0; i < SatuanBahanParent.Count; i++) {
 			SatuanBahanParent [i].GetComponent<Image> ().color = new Color32 (255,255,255,60);
@@ -39,7 +41,20 @@ public class VL8Manager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Vector2.Distance(SatuanBahan[0].transform.position,this.transform.position) < 300)
+
+		 if(CabutPaku == 1)
+		{
+			KumpulanAction [3].SetActive (false);
+			KumpulanAction [4].SetActive (true);
+			SatuanBahanScriptPer.enabled = false;
+			Anim.SetBool ("Jalan",true);
+		}
+
+	}
+
+	public void VL8Atur(int index)
+	{
+		if(index==0)
 		{
 			SatuanBahan [0].transform.position = SatuanBahanParent [0].transform.position;
 
@@ -55,7 +70,7 @@ public class VL8Manager : MonoBehaviour {
 
 		}
 
-		else if(Vector2.Distance(SatuanBahan[1].transform.position,BackBawah.transform.position) < 300)
+		else if(index==1)
 		{
 			SatuanBahan [1].transform.position = SatuanBahanParent [1].transform.position;
 
@@ -70,7 +85,7 @@ public class VL8Manager : MonoBehaviour {
 			SatuanBahanScript [1].enabled = false;
 			SatuanBahanScript [2].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[2].transform.position,BackBawah.transform.position) < 300)
+		else if(index==2)
 		{
 			SatuanBahan [2].transform.position = SatuanBahanParent [2].transform.position;
 
@@ -85,9 +100,9 @@ public class VL8Manager : MonoBehaviour {
 			SatuanBahanScript [2].enabled = false;
 			SatuanBahanScript [3].enabled = true;
 		}
-		else if(Vector2.Distance(SatuanBahan[3].transform.position,BackBawah.transform.position) < 300)
+		else if(index==3)
 		{
-			
+
 			SatuanBahan [3].transform.position = SatuanBahanParent [3].transform.position;
 
 			SatuanBahan [3].transform.position = SatuanBahanParent [3].transform.position;
@@ -98,17 +113,10 @@ public class VL8Manager : MonoBehaviour {
 			KumpulanAction [2].SetActive (false);
 			KumpulanAction [3].SetActive (true);
 			SatuanBahanScript [3].enabled = false;
-		
+			SatuanBahanScriptPer.enabled = true;
 		}
-		else if(CabutPaku == 1)
-		{
-			KumpulanAction [3].SetActive (false);
-			KumpulanAction [4].SetActive (true);
-			SatuanBahanScript [4].enabled = false;
-			Anim.SetBool ("Jalan",true);
-		}
-
 	}
+
 	public void RestrartVL4()
 	{
 		for (int i = 0; i < KumpulanAction.Count; i++) {
