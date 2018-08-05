@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Animasi/vl1.unity
     guid: e1d6e116190b4194e8b5407c7a725e18
+  - enabled: 1
+    path: Assets/Scene/Animasi/vl2.unity
+    guid: 5bc4c5d30693e8c4f838d2efcadb5797

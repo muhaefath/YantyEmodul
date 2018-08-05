@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ManagerSimpanData : MonoBehaviour {
 	public InputField[] Jawab;
 	public string[] NamaData;
+
 	// Use this for initialization
 	void Start () {
 		

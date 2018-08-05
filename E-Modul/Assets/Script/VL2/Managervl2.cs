@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Managervl2 : MonoBehaviour {
 	public GameObject penggaris; public bool nyala;
 
@@ -203,5 +204,10 @@ public class Managervl2 : MonoBehaviour {
 		SatuanFlowrate [2].SetActive (true);
 		SatuanFlowrate [3].SetActive (false);
 		FluiDensity [1].text = "kg/m";
+	}
+
+	public void PindahScene(string Nama)
+	{
+		SceneManager.LoadScene (Nama);
 	}
 }

@@ -13,8 +13,8 @@ public class VL3Manager : MonoBehaviour {
 
 	public GameObject Apayangterjadi;
 
-	public Animator Anim;
-
+	public Animator[] Anim;
+	public	int indexBeban;
 
 	// Use this for initialization
 	void Start () {
@@ -116,7 +116,37 @@ public class VL3Manager : MonoBehaviour {
 			KumpulanAction [3].SetActive (false);
 			KumpulanAction [4].SetActive (true);
 			SatuanBahanScript [4].enabled = false;
+			indexBeban = 1;
+		}
 
+		else if(index ==5)
+		{
+			//SatuanBahan [4].transform.position = SatuanBahanParent [4].transform.position;
+
+			//Apayangterjadi.SetActive (true);
+
+			//SatuanBahanParent [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
+			//SatuanBahan [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
+
+			KumpulanAction [4].SetActive (false);
+			KumpulanAction [5].SetActive (true);
+			//SatuanBahanScript [5].enabled = false;
+			indexBeban =2;
+		}
+
+		else if(index ==6)
+		{
+			//SatuanBahan [4].transform.position = SatuanBahanParent [4].transform.position;
+
+			//Apayangterjadi.SetActive (true);
+
+			//SatuanBahanParent [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
+			//SatuanBahan [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
+
+			KumpulanAction [5].SetActive (false);
+			KumpulanAction [6].SetActive (true);
+			//SatuanBahanScript [6].enabled = false;
+			indexBeban =3;
 		}
 	}
 
@@ -130,7 +160,9 @@ public class VL3Manager : MonoBehaviour {
 			SatuanBahanScript [i].enabled = false;
 		}
 		SatuanBahanScript [0].enabled  = true;
-		Anim.SetBool ("Jalan",false);
+		Anim[0].SetBool ("Jalan",false);
+		Anim[1].SetBool ("Jalan",false);
+		Anim[2].SetBool ("Jalan",false);
 
 		for (int i = 0; i < SatuanBahanParent.Count; i++) {
 			SatuanBahanParent [i].GetComponent<Image> ().color = new Color32 (255,255,255,60);
@@ -139,12 +171,58 @@ public class VL3Manager : MonoBehaviour {
 		Apayangterjadi.SetActive (false);
 		SatuanBahanParent [0].GetComponent<Image> ().color = new Color32 (255,255,255,255);
 		SatuanBahan [0].GetComponent<Image> ().color = new Color32 (255,255,255,255);
+		indexBeban = 0;
 	}
 
 	public void TekanPer()
 	{
-		Anim.SetBool ("Jalan",true);
+		if (indexBeban == 1) {
+			Anim[0].Play("gb3");
+
+
+			Anim[0].SetBool ("Jalan",true);
+			
+		
+		}
+		else if (indexBeban == 2) {
+			
+			Anim[1].Play("gb3");
+		
+			Anim[1].SetBool ("Jalan",true);
+		}
+		else if (indexBeban == 3) {
+
+			Anim[2].Play("gb3");
+			Anim[2].SetBool ("Jalan",true);
+		}
 	}
 
+	public void PindahBeban(int index)
+	{
+		if (index == 1) {
+			KumpulanAction [4].SetActive (false);
+			KumpulanAction [5].SetActive (true);
+			KumpulanAction [6].SetActive (false);
+			Anim[1].SetBool ("Jalan",false);
+
+			indexBeban =2;
+		}else if (index == 0) {
+			KumpulanAction [4].SetActive (true);
+			KumpulanAction [5].SetActive (false);
+			KumpulanAction [6].SetActive (false);
+			Anim[0].SetBool ("Jalan",false);
+
+			indexBeban =1;
+		}
+		else if (index == 2) {
+			KumpulanAction [6].SetActive (true);
+			KumpulanAction [5].SetActive (false);
+			KumpulanAction [4].SetActive (false);
+			Anim[2].SetBool ("Jalan",false);
+
+			indexBeban =3;
+		}
+
+	}
 
 }

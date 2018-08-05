@@ -14,6 +14,7 @@ public class VL5Manager : MonoBehaviour {
 	public GameObject BackBawah;
 
 	public Animator Anim;
+	public GameObject SiletSabun;
 	// Use this for initialization
 	void Start () {
 		for (int i = 0; i <  KumpulanAction.Count; i++) {
@@ -31,6 +32,7 @@ public class VL5Manager : MonoBehaviour {
 		}
 		SatuanBahanParent [0].GetComponent<Image> ().color = new Color32 (255,255,255,255);
 		SatuanBahan [0].GetComponent<Image> ().color = new Color32 (255,255,255,255);
+		SiletSabun.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -54,7 +56,7 @@ public class VL5Manager : MonoBehaviour {
 			KumpulanAction [0].SetActive (true);
 			SatuanBahanScript [0].enabled = false;
 			SatuanBahanScript [1].enabled = true;
-
+			SiletSabun.SetActive (false);
 		}
 
 		else if(index ==1) 
@@ -94,9 +96,21 @@ public class VL5Manager : MonoBehaviour {
 			SatuanBahanParent [3].GetComponent<Image> ().color = new Color32 (255,255,255,60);
 			SatuanBahan [3].GetComponent<Image> ().color = new Color32 (255,255,255,60);
 
+			SatuanBahanParent [4].GetComponent<Image> ().color = new Color32 (255,255,255,255);
+			SatuanBahan [4].GetComponent<Image> ().color = new Color32 (255,255,255,255);
+
 			KumpulanAction [2].SetActive (false);
 			KumpulanAction [3].SetActive (true);
 			SatuanBahanScript [3].enabled = false;
+			SatuanBahanScript [4].enabled = true;
+			SiletSabun.SetActive (true);
+			//Anim.SetBool ("Jalan",true);
+		}
+		else if(index ==4)
+		{
+			SatuanBahanParent [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
+			SatuanBahan [4].GetComponent<Image> ().color = new Color32 (255,255,255,60);
+
 			Anim.SetBool ("Jalan",true);
 		}
 	}
@@ -120,7 +134,7 @@ public class VL5Manager : MonoBehaviour {
 		SatuanBahan [0].GetComponent<Image> ().color = new Color32 (255,255,255,255);
 
 		Anim.SetBool ("Jalan",false);
-
+		SiletSabun.SetActive (false);
 	}
 
 

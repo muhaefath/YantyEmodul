@@ -9,9 +9,11 @@ public class PindahScene : MonoBehaviour {
 
 
 	public  SearchHalm manager;
+	public Button KunciJawabanDaftarisi;
+	public Button KunciJawabanDaftarSearch;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start () {		
 		if (PlayerPrefs.GetInt ("BalikSoal") == 1) {
 			for (int i = 0; i < Halaman.Length; i++) {
 				Halaman [i].SetActive (false);
@@ -43,7 +45,15 @@ public class PindahScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+
+		if (PlayerPrefs.GetInt ("KunciJawaban") == 1) {
+			KunciJawabanDaftarisi.interactable = true;
+			KunciJawabanDaftarSearch.interactable = true;
+		} else {
+			KunciJawabanDaftarisi.interactable = false;
+			KunciJawabanDaftarSearch.interactable = false;
+		}
 	}
 
 	public void Pindah1(string NamaScene)
@@ -66,9 +76,12 @@ public class PindahScene : MonoBehaviour {
 			}
 			Halaman [Nama + 1].SetActive (true);
 		}
-		
-		manager.TutupSearch ();
 
+		if(Nama == 68)
+		{
+			PlayerPrefs.SetInt ("KunciJawaban",1);
+		}
+		manager.TutupSearch ();
 
 	}
 
@@ -85,6 +98,7 @@ public class PindahScene : MonoBehaviour {
 			Halaman [Nama - 1].SetActive (true);
 		}
 		manager.TutupSearch ();
+
 	}
 
 	public void Youtube()
