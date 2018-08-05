@@ -1,0 +1,74 @@
+1. Rapihin halaman *ini apa?  -> ini coba setiap halaman yang 1 baris cuma 1 atau 2 kata lu bikin jadi 3 kata minimal jar. ada yang ada gambar gitu terus jadi dikit 1 baris nah dosen yanty gak mau. jadi lo buatnya tulisan abisin dulu baru di bawahnya gambar
+
+2. SS *ini apa? => ini gak usah udah efath kerjain
+
+3. Peta Konsep *jadinya yg mana? => yang terakhir gua kasih di nomor nomorin jar
+
+4. Jarak kosong (semua halaman) *ini kasih pilihan ke doi, pilihannya digambar yg terlampir dibawah => oke gua paham kalo gitu versi kedua aja jar gapapa ada jarak (jadi gak usah revisi lu)
+
+5. Tulisan Menu => Tulisan "Search"(di tombol search) diganti jadi "Menu"
+
+6. Kegiatan Belajar 1 (14) *halaman 14 gw ga paham salah dimana => di atas gambar orang di kutub ada tulisan "Tekanan Hidrostatis" nah lo tambahin jadi "1.1 Tekanan Hidrostatis".
+intinya semua judul gitu ada angkanya dulu jar tolong lo cek ya
+
+7. Arti tekanan dirapihin (14) => nah ini yang gua maksud di nomor 1 jar jadi tulisan dulu selesaiin semua baru di bawahnya gambar
+
+8. Masalah tekanan (14) => ini lo coba cek isi tulisan di bawah gambar orang nyelam di emodul 4, soalnya gak sama jar
+
+9E. Tulisan di input (14) => ini efath
+
+10. Problem (14) => tulisan "prblem " diganti "masalah". ini berlaku buat semua halaman ya jar tolong cek cekin juga ya
+
+11E. Pengamatan Individu (15) => efath
+
+12. Hukum Pokok Hidrostatis (17)
+    Problem, nama gambar, ukuran *diapain?
+	=> tulisan "problem" diganti "masalah", nama gambarnya kan "gambar 1.3" harusnya ada tambahanya jar jadi "gambar 1.3 bla bla " (ini lo liat di emodul 4), terus gambar yang problem itu digedein aja pecah gapapa
+
+13E. Contoh soal hapus input (20) => ini efath
+
+14. Hitung skor persamaan matematis *maksudnya? => kan di modul4 ada tuh perintah suruh bikin hitung skornya 1/ bla bla bla gitu. nah yanty minta formatnya persis gitu
+
+15. "Isi Halaman dibawah ini untuk mengirim jawaban anda" *ini ape? => ini efath
+
+16. Semua judul di tekankan warna & ukuran (24) *judul yg dimaksud apa aje? => judul warna dan ukuranya diperbesar, semua judul di awab bab ya jar (ada sekitar 9 bab kayaknya)
+
+17. 2.1 Hukum Pascal Masalah (24) & Link Video masalah *maksud loh? => di atas gambar mobil lo tulis "Masalah" , yang link video bagian efath
+
+18E. Error beban 500 (25) => ini efath
+
+19. Halaman (27) diisi kilas pribadi, gambar digedein *ape tu kilas pribadi? => 
+
+20. Halaman (30) diberi input => ini tolong halamanya dipanjangin dikit ya jar (soalnya mau efath tambahin gambar di paling bawah) sepanjang panjangnya dah
+
+21. Error ketinggalan (31) *maksudnya ape ni bang? => ini efath
+
+22. Gambar rumus (33) *gambar rumus ini yanti udah ngasih pat? => di paling bawah ada rumus gitu kan jar, nah itu lo bikin apa dapet gambar jar? mau bikin atau gak intinya itu burem jadi tolong kabarin ya bisa diperbaiki gak
+
+23. Judul (37) 3.1 => di bawah tulisan "kegiatan 3" , tambahin jadi "tegangan permukaan zat cair 3.1, kapilaritas 3.2, viskolaritas 3.3"
+
+24. Masalah (37) *kasih tulisan masalah diatas nyamuk? => di atas gambar nyamuk lu tambahin tulisan "masalah"
+ 
+25. input (37) *dikasih input? => ini tolong lu panjangin ya bawahnya sama kayak di nomor 20
+
+26. Tegangan permukaan zaat cair (39) "Apa yg terjadi" *ape maksudnyaa => ini efath
+
+27. Tulisan dibesarin (38-43, 48, 49, 54, 60, 56, 59, 63, 65) => ini belum revisi jar jadi lo gedein ya tulisanya (ada jarak kayak waktu itu ya udah gapapa wkwkwk)
+
+28. Fluida dinamis bukan statis lagi (53) => di paling atas ada tulisan "fluida statis" diganti jadi "fluida dinamis"
+
+29E. Empty diganti tulisan bukan statis lagi => ini efath
+
+30E.Alas VL balik ke halaman 57, 58 => ini efath
+
+31E. VL pindah paling blkng => ini efath
+
+32. Efek Teoncell dihapus (59) *dihapus doang? ga diganti ape? => iya dihapus aja tulisan "efek teoncel" nya
+
+33E. halaman 61 dibuang => ini efath
+
+34E. Halaman 62 kasih input => ini sama ya jar kayak nomor 20, lo panjangin bawahnya
+
+35E. Gambar albert Einsten Pindah ke hal 68 => di halaman 67 lu apus gambar einstenya, terus tarok di satu halaman kosong gede gitu => cek nomor 36
+ 
+36E. nah bentuk halamanya kayak gimana ada contohnya di nomor 36. lo tarok gambar gede treus bawahnya tulisan "kunci jawaban"

@@ -120,8 +120,10 @@ public class KirimEmail2 : MonoBehaviour {
 
 			+ "\n Jawaban Nomor 41: " + PlayerPrefs.GetString (manager.NamaData[40]) + "\n"
 
-			/*
+
 			+ "\n Jawaban Nomor 42: " + PlayerPrefs.GetString (manager.NamaData[41]) + "\n"
+
+			/*
 			+ "\n Jawaban Nomor 43: " + PlayerPrefs.GetString (manager.NamaData[42]) + "\n"
 			+ "\n Jawaban Nomor 44: " + PlayerPrefs.GetString (manager.NamaData[43]) + "\n"
 */

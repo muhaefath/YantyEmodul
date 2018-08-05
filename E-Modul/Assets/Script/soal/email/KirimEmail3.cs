@@ -110,15 +110,19 @@ public class KirimEmail3 : MonoBehaviour {
 			+ "\n Jawaban Nomor 40: " + PlayerPrefs.GetString (manager.NamaData[39]) + "\n"
 			+ "\n Jawaban Nomor 41: " + PlayerPrefs.GetString (manager.NamaData[40]) + "\n"
 
-	*/
+
 			+ "\n Jawaban Nomor 42: " + PlayerPrefs.GetString (manager.NamaData[41]) + "\n"
+
+	*/
 			+ "\n Jawaban Nomor 43: " + PlayerPrefs.GetString (manager.NamaData[42]) + "\n"
 			+ "\n Jawaban Nomor 44: " + PlayerPrefs.GetString (manager.NamaData[43]) + "\n"
 			+ "\n Jawaban Nomor 45: " + PlayerPrefs.GetString (manager.NamaData[44]) + "\n"
 			+ "\n Jawaban Nomor 46: " + PlayerPrefs.GetString (manager.NamaData[45]) + "\n"
 			+ "\n Jawaban Nomor 47: " + PlayerPrefs.GetString (manager.NamaData[46]) + "\n"
 			+ "\n Jawaban Nomor 48: " + PlayerPrefs.GetString (manager.NamaData[47]) + "\n"
-			+ "\n Jawaban Nomor 49: " + PlayerPrefs.GetString (manager.NamaData[47]) + "\n"
+			+ "\n Jawaban Nomor 49: " + PlayerPrefs.GetString (manager.NamaData[48]) + "\n"
+			+ "\n Jawaban Nomor 50: " + PlayerPrefs.GetString (manager.NamaData[49]) + "\n"
+			+ "\n Jawaban Nomor 51: " + PlayerPrefs.GetString (manager.NamaData[50]) + "\n"
 			;
 
 

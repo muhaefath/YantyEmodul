@@ -45998,7 +45998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1036889201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -55717,18 +55717,19 @@ MonoBehaviour:
   - {fileID: 1830477451}
   - {fileID: 1401646782}
   - {fileID: 1015989668}
-  - {fileID: 541558058}
-  - {fileID: 1957677943}
+  - {fileID: 1862947935}
+  - {fileID: 126470132}
   - {fileID: 565661291}
-  - {fileID: 414119898}
   - {fileID: 414119898}
   - {fileID: 350942105}
   - {fileID: 550405384}
+  - {fileID: 541558058}
   - {fileID: 95653335}
   - {fileID: 208736571}
   - {fileID: 65426250}
   - {fileID: 244553140}
   - {fileID: 1863141047}
+  - {fileID: 1957677943}
   - {fileID: 2104835619}
   - {fileID: 1461444937}
   - {fileID: 1112008248}
@@ -55754,7 +55755,10 @@ MonoBehaviour:
   - {fileID: 176111018}
   - {fileID: 591220902}
   - {fileID: 1880750373}
+  - {fileID: 1708975609}
   NamaData:
+  - 
+  - 
   - 
   - 
   - 
