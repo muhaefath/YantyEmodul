@@ -66,7 +66,7 @@ public class KirimEmail1 : MonoBehaviour {
 		mail.Body = "Mail From: " + YourEmail.text + "\n Berikut adalah jawaban Kegiatan 2\n" + "\n \n " + Message.text + "\n \n "
 
 
-			/*
+            /*
 			+ "\n Jawaban Nomor 1: " + PlayerPrefs.GetString (manager.NamaData[0]) + "\n"
 			+ "\n Jawaban Nomor 2: " + PlayerPrefs.GetString (manager.NamaData[1]) + "\n"
 			+ "\n Jawaban Nomor 3: " + PlayerPrefs.GetString (manager.NamaData[2]) + "\n"
@@ -79,10 +79,10 @@ public class KirimEmail1 : MonoBehaviour {
 			+ "\n Jawaban Nomor 10: " + PlayerPrefs.GetString (manager.NamaData[9]) + "\n"
 			+ "\n Jawaban Nomor 11: " + PlayerPrefs.GetString (manager.NamaData[10]) + "\n"
 			+ "\n Jawaban Nomor 12: " + PlayerPrefs.GetString (manager.NamaData[11]) + "\n"
+            */
+            + "\n Jawaban Nomor 13: " + PlayerPrefs.GetString (manager.NamaData[12]) + "\n"
 
-			+ "\n Jawaban Nomor 13: " + PlayerPrefs.GetString (manager.NamaData[12]) + "\n"
-
-			*/
+			
 			+ "\n Jawaban Nomor 14: " + PlayerPrefs.GetString (manager.NamaData[13]) + "\n"
 			+ "\n Jawaban Nomor 15: " + PlayerPrefs.GetString (manager.NamaData[14]) + "\n"
 			+ "\n Jawaban Nomor 16: " + PlayerPrefs.GetString (manager.NamaData[15]) + "\n"

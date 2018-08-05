@@ -378,7 +378,7 @@ public class dragitem : MonoBehaviour {
 
 	public void PindahScene3(string nama)
 	{
-		//PlayerPrefs.SetInt ("BalikSoal",3);
+		PlayerPrefs.SetInt ("BalikSoal",3);
 		SceneManager.LoadScene (nama);
 	}
 }

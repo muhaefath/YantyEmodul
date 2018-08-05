@@ -208,6 +208,7 @@ public class Managervl2 : MonoBehaviour {
 
 	public void PindahScene(string Nama)
 	{
-		SceneManager.LoadScene (Nama);
+        PlayerPrefs.SetInt("BalikSoal", 4);
+        SceneManager.LoadScene (Nama);
 	}
 }

@@ -32,10 +32,19 @@ public class PindahScene : MonoBehaviour {
 			for (int i = 0; i < Halaman.Length; i++) {
 				Halaman [i].SetActive (false);
 			}
-			Halaman [14].SetActive (true);
+			Halaman [57].SetActive (true);
 			PlayerPrefs.SetInt ("BalikSoal", 0);
 		}
-		else {
+        else if (PlayerPrefs.GetInt("BalikSoal") == 4)
+        {
+            for (int i = 0; i < Halaman.Length; i++)
+            {
+                Halaman[i].SetActive(false);
+            }
+            Halaman[58].SetActive(true);
+            PlayerPrefs.SetInt("BalikSoal", 0);
+        }
+        else {
 			for (int i = 0; i < Halaman.Length; i++) {
 				Halaman [i].SetActive (false);
 			}
